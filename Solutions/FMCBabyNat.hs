@@ -68,6 +68,7 @@ monus (S n) (S m) = monus n m
 -- multiplication
 (*) :: Nat -> Nat -> Nat
 _ * O = O
+O * _ = O
 n * (S p) = n * p + n
 
 infixl 7 *
@@ -77,7 +78,7 @@ infixl 7 *
 _ ^ O = S O
 n ^ (S m) = n ^ m * n -- só adiciona mais um produto
 
-infixr 9 ^
+infixr 8 ^
 
 -- menor ou igual: para definir o quociente, posteriormente
 (<=) :: Nat -> Nat -> Nat
